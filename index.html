@@ -26,7 +26,6 @@
             background: white;
             border-radius: 10px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
         }
 
         /* Header Section */
@@ -65,6 +64,17 @@
             opacity: 0.8;
         }
 
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            animation: fadeInDown 0.8s ease-out both;
+        }
+
         .summary {
             background: rgba(255, 255, 255, 0.1);
             padding: 20px;
@@ -72,6 +82,62 @@
             border-radius: 5px;
             font-size: 1.05em;
             line-height: 1.8;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeInUp 0.9s ease-out both;
+            animation-delay: 0.1s;
+        }
+
+        .education-item,
+        .skill-category,
+        .project-item,
+        .cert-item,
+        .hobby-item {
+            opacity: 0;
+            transform: translateY(15px);
+            animation: fadeInUp 0.9s ease-out both;
+        }
+
+        .education-item {
+            animation-delay: 0.15s;
+        }
+
+        .skill-category {
+            animation-delay: 0.18s;
+        }
+
+        .project-item {
+            animation-delay: 0.2s;
+        }
+
+        .cert-item {
+            animation-delay: 0.22s;
+        }
+
+        .hobby-item {
+            animation-delay: 0.24s;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Main Content */
@@ -340,9 +406,10 @@
                 <span>📍 Hyderabad, Telangana, India</span>
                 <span>🔗 <a href="https://www.linkedin.com/in/sathish-kanthi-60b9b7226" target="_blank">LinkedIn Profile</a></span>
             </div>
-            <div class="summary">
-                <p>Motivated Artificial Intelligence graduate with strong knowledge in machine learning, deep learning, and computer vision. Experienced in developing AI-based applications using Python, TensorFlow, OpenCV, and SQL. Built a real-time emotion detection system integrating facial expression and speech analysis. Passionate about solving real-world problems using AI technologies and continuously learning advanced machine learning techniques. Seeking an opportunity to contribute to innovative AI and data-driven projects.</p>
-            </div>
+        </div>
+
+        <div class="summary">
+            <p>Motivated Artificial Intelligence graduate with strong knowledge in machine learning, deep learning, and computer vision. Experienced in developing AI-based applications using Python, TensorFlow, OpenCV, and SQL. Built a real-time emotion detection system integrating facial expression and speech analysis. Passionate about solving real-world problems using AI technologies and continuously learning advanced machine learning techniques. Seeking an opportunity to contribute to innovative AI and data-driven projects.</p>
         </div>
 
         <!-- Main Content -->

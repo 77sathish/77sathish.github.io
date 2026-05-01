@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sathish Kanthi - AI Professional Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+
+        .summary {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 40px 30px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            font-weight: 700;
+        }
+
+        /* Education Section */
+        .education-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .education-item:last-child {
+            border-bottom: none;
+        }
+
+        .education-item h3 {
+            color: #333;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .education-item .degree {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .education-item .meta {
+            color: #888;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+
+        .education-item p {
+            color: #555;
+            margin: 5px 0;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .skill-category h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: background 0.3s;
+        }
+
+        .skill-tag:hover {
+            background: #764ba2;
+        }
+
+        /* Projects Section */
+        .project-item {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+        }
+
+        .project-item h4 {
+            color: #333;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .project-meta {
+            color: #888;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .tech-badge {
+            background: #667eea;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.85em;
+        }
+
+        .project-item ul {
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .project-item li {
+            margin-bottom: 8px;
+        }
+
+        /* Certifications Section */
+        .cert-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .cert-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cert-icon {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        .cert-item p {
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        /* Languages & Hobbies */
+        .languages-hobbies {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .hobby-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .hobby-icon {
+            color: #667eea;
+            font-size: 1.2em;
+        }
+
+        /* Footer */
+        .profile-footer {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            text-align: center;
+            color: #888;
+            font-size: 0.9em;
+            margin-top: 30px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .languages-hobbies {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 1.5em;
+            }
+
+            .cert-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+
+            .section-title {
+                page-break-after: avoid;
+            }
+
+            .project-item, .skill-category {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>Sathish Kanthi</h1>
+            <div class="contact-info">
+                <span>📧 <a href="mailto:Kanthi.sathish777@gmail.com">Kanthi.sathish777@gmail.com</a></span>
+                <span>📱 +91 7659876245</span>
+                <span>📍 Hyderabad, Telangana, India</span>
+                <span>🔗 <a href="https://www.linkedin.com/in/sathish-kanthi-60b9b7226" target="_blank">LinkedIn Profile</a></span>
+            </div>
+            <div class="summary">
+                <p>Motivated Artificial Intelligence graduate with strong knowledge in machine learning, deep learning, and computer vision. Experienced in developing AI-based applications using Python, TensorFlow, OpenCV, and SQL. Built a real-time emotion detection system integrating facial expression and speech analysis. Passionate about solving real-world problems using AI technologies and continuously learning advanced machine learning techniques. Seeking an opportunity to contribute to innovative AI and data-driven projects.</p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Education Section -->
+            <section id="education">
+                <h2 class="section-title">🎓 Education</h2>
+                
+                <div class="education-item">
+                    <h3>Vidya Jyothi Institute Of Technology, India</h3>
+                    <div class="degree">B.Tech in Artificial Intelligence</div>
+                    <div class="meta">2021 - 2025 | Hyderabad, Telangana | CGPA: 8.19</div>
+                    <p>✓ Graduated with First Class Honour</p>
+                    <p>✓ Completed final-year project on Real-time emotional analysis With Dual Modal Input</p>
+                </div>
+
+                <div class="education-item">
+                    <h3>Nano Junior College</h3>
+                    <div class="degree">Intermediate in MPC</div>
+                    <div class="meta">2018 - 2020 | Hyderabad, Telangana | Percentage: 86.3%</div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills">
+                <h2 class="section-title">💼 Skills</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Programming Languages</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">PowerBI</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>AI & Machine Learning</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Computer Vision</span>
+                            <span class="skill-tag">Deep Learning</span>
+                            <span class="skill-tag">Neural Networks</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Libraries & Tools</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">OpenCV</span>
+                            <span class="skill-tag">Librosa</span>
+                            <span class="skill-tag">LangChain</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Platforms</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Jupyter Notebook</span>
+                            <span class="skill-tag">Google Colab</span>
+                            <span class="skill-tag">PyCharm</span>
+                            <span class="skill-tag">MySQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Soft Skills</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Communication</span>
+                            <span class="skill-tag">Problem Solving</span>
+                            <span class="skill-tag">Team Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects">
+                <h2 class="section-title">🚀 Projects</h2>
+
+                <div class="project-item">
+                    <h4>Real-Time Emotional Detection System with Dual Modal Input</h4>
+                    <div class="project-meta">November 2024 - February 2025</div>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">TensorFlow</span>
+                        <span class="tech-badge">OpenCV</span>
+                        <span class="tech-badge">CNN</span>
+                        <span class="tech-badge">RNN</span>
+                        <span class="tech-badge">Librosa</span>
+                    </div>
+                    <ul>
+                        <li>Developed a real-time emotion detection system using facial expressions and voice inputs</li>
+                        <li>Implemented CNN models for facial emotion recognition and MFCC-based feature extraction for speech emotion analysis</li>
+                        <li>Integrated computer vision and deep learning techniques to process video and audio simultaneously</li>
+                        <li>Achieved ~85% accuracy with improved F1-score during real-time testing</li>
+                        <li>Built a simple GUI for real-time emotion visualization</li>
+                    </ul>
+                </div>
+
+                <div class="project-item">
+                    <h4>Intelligent Fraud Detection System Using Machine Learning</h4>
+                    <div class="project-meta">March 2023 - May 2023</div>
+                    <ul>
+                        <li>Developed machine learning models for fraudulent transaction detection</li>
+                        <li>Analyzed and processed large datasets using Python and SQL</li>
+                        <li>Implemented classification algorithms for improved detection accuracy</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Certifications Section -->
+            <section id="certifications">
+                <h2 class="section-title">🏆 Certifications</h2>
+                
+                <div class="cert-list">
+                    <div class="cert-item">
+                        <span class="cert-icon">✓</span>
+                        <p>Data Engineering - AWS Academy</p>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-icon">✓</span>
+                        <p>Machine Learning - AWS Academy</p>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-icon">✓</span>
+                        <p>Neural Network and Deep Learning - GreatLearning</p>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-icon">✓</span>
+                        <p>Introduction to C Programming - IIT Bombay</p>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-icon">✓</span>
+                        <p>AI Foundation and Advanced - Hexart.ai</p>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-icon">✓</span>
+                        <p>Python Basis - HackerRank</p>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-icon">✓</span>
+                        <p>Building LLM Application Using Prompt Engineering - NVIDIA</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Languages & Hobbies Section -->
+            <section id="languages-hobbies">
+                <h2 class="section-title">🌐 Languages & Hobbies</h2>
+                
+                <div class="languages-hobbies">
+                    <div>
+                        <h4 style="color: #667eea; margin-bottom: 15px;">Languages</h4>
+                        <div class="hobby-item">
+                            <span class="hobby-icon">🗣️</span>
+                            <span>English</span>
+                        </div>
+                        <div class="hobby-item">
+                            <span class="hobby-icon">🗣️</span>
+                            <span>Telugu</span>
+                        </div>
+                        <div class="hobby-item">
+                            <span class="hobby-icon">🗣️</span>
+                            <span>Hindi</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 style="color: #667eea; margin-bottom: 15px;">Hobbies</h4>
+                        <div class="hobby-item">
+                            <span class="hobby-icon">🏏</span>
+                            <span>Playing Cricket</span>
+                        </div>
+                        <div class="hobby-item">
+                            <span class="hobby-icon">🎤</span>
+                            <span>Singing Songs</span>
+                        </div>
+                        <div class="hobby-item">
+                            <span class="hobby-icon">🎵</span>
+                            <span>Listening to Songs</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <div class="profile-footer">
+            <p>📅 Date of Birth: August 12, 2002 | Gender: Male</p>
+            <p style="margin-top: 10px; font-size: 0.85em;">© 2025 Sathish Kanthi. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
